@@ -21,5 +21,7 @@ jobs:
           aws-region: sa-east-1
 
       - name: Sync to S3
-        run: aws s3 sync s3://www.dutraefariaadvogados.com --delete --exclude ".github/*"
+        run: |
+          aws s3 sync . s3://www.dutraefariaadvogados.com --delete --exclude ".github/*"
+
         
